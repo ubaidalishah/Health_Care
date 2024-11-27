@@ -5,13 +5,13 @@ import os
 from dotenv import load_dotenv
 
 
-# from google.oauth2 import service_account
-# import os
+from google.oauth2 import service_account
+import os
 
-# # Assuming you have the credentials file saved locally
-# credentials_file_path = '/home/bacha/Desktop/google_cloud_credentials/text-to-speech-442918-f56342ef02f7.json'
+# Assuming you have the credentials file saved locally
+credentials_file_path = '/home/bacha/Desktop/google_cloud_credentials/text-to-speech-442918-f56342ef02f7.json'
 
-# credentials = service_account.Credentials.from_service_account_file(credentials_file_path)
+credentials = service_account.Credentials.from_service_account_file(credentials_file_path)
 
 
 # Load environment variables
