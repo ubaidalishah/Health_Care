@@ -1,0 +1,5 @@
+# Ignore .env file (for sensitive environment variables)
+.env
+
+# Ignore .bash_profile (or any similar shell configuration files)
+.bash_profile
