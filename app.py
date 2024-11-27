@@ -2,20 +2,29 @@ from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 import openai
 import os
+import json
 from dotenv import load_dotenv
 
 
-# from google.oauth2 import service_account
-import os
+from google.oauth2 import service_account
+
 
 # Assuming you have the credentials file saved locally
-# credentials_file_path = '/home/bacha/Desktop/google_cloud_credentials/text-to-speech-442918-f56342ef02f7.json'
-
-# credentials = service_account.Credentials.from_service_account_file(credentials_file_path)
+# credentials_file_path = '/home/bacha/Desktop/google_cloud_credentials/text-to-speech-442918-f56342ef02f7.json'import os
 
 
-# Load environment variables
+# Load .env variables into the environment
 load_dotenv()
+
+# Retrieve the credentials JSON
+google_credentials = os.getenv('GOOGLE_JSON')
+
+# # Parse the JSON string into a dictionary
+credentials_info = json.loads(google_credentials)
+
+# print("Google credentials loaded successfully.")
+# print('this is google credential',google_credentials)
+
 
 app = Flask(__name__)
 CORS(app)
