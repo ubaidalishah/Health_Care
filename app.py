@@ -17,7 +17,7 @@ from google.oauth2 import service_account
 load_dotenv()
 
 # Retrieve the credentials JSON
-google_credentials = os.getenv('GOOGLE_JSON')
+google_credentials = os.getenv('GOOGLE_JSON1')
 
 # # Parse the JSON string into a dictionary
 credentials_info = json.loads(google_credentials)
@@ -30,7 +30,7 @@ app = Flask(__name__)
 CORS(app)
 
 # Set OpenAI API key
-openai.api_key = os.getenv('MY_API')
+openai.api_key = os.getenv('MY_API1')
 
 @app.route('/')
 def index():
